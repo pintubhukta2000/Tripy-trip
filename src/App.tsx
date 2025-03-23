@@ -45,6 +45,8 @@ import {
   Pie,
   Cell,
 } from "recharts";
+import HotelHiltonImg from "../public/hotel-hilto-img.jpg";
+import UserImg from "../public/User_image.png";
 
 function App() {
   const [activeTab, setActiveTab] = useState("stays");
@@ -127,7 +129,7 @@ function App() {
       guests: 2,
       paid: "rsp.150",
       cost: "rsp.1500",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: UserImg,
     },
     {
       id: 2,
@@ -139,7 +141,7 @@ function App() {
       guests: 5,
       paid: "paid",
       cost: "rsp.5500",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: UserImg,
     },
     {
       id: 3,
@@ -151,7 +153,7 @@ function App() {
       guests: 3,
       paid: "rsp.150",
       cost: "rsp.2500",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: UserImg,
     },
     {
       id: 4,
@@ -163,7 +165,7 @@ function App() {
       guests: 2,
       paid: "rsp.150",
       cost: "rsp.3000",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: UserImg,
     },
   ];
 
@@ -976,7 +978,7 @@ function App() {
                   <div key={index} className="flex items-center">
                     <div className="h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center mr-3 overflow-hidden">
                       <img
-                        src="/placeholder.svg?height=32&width=32"
+                        src={UserImg}
                         alt={event.guest}
                         className="h-full w-full object-cover"
                       />
@@ -1026,12 +1028,12 @@ function App() {
                     stroke="#e5e7eb"
                     strokeWidth="10"
                   />
-                  <path
+                  {/* <path
                     d="M 0 50 A 50 50 0 0 1 90 50"
                     fill="none"
                     stroke="#3b82f6"
                     strokeWidth="10"
-                  />
+                  /> */}
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-center">
@@ -1971,7 +1973,7 @@ function App() {
               trigger={
                 <button className="flex items-center gap-2 px-3 py-2 border border-gray-300 rounded-md hover:bg-gray-50">
                   <img
-                    src="/placeholder.svg?height=24&width=24"
+                    src={HotelHiltonImg}
                     width={24}
                     height={24}
                     alt="Hotel"
@@ -2005,7 +2007,7 @@ function App() {
               trigger={
                 <button className="relative h-8 w-8 rounded-full bg-gray-200 flex items-center justify-center overflow-hidden">
                   <img
-                    src="/placeholder.svg?height=32&width=32"
+                    src={UserImg}
                     alt="User"
                     className="h-full w-full object-cover"
                   />
