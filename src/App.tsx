@@ -1659,7 +1659,7 @@ function App() {
                         `${name}: ${(percent * 100).toFixed(0)}%`
                       }
                     >
-                      {foodOrdersData.map((entry, index) => (
+                      {foodOrdersData.map((_entry: any, index: any) => (
                         <Cell
                           key={`cell-${index}`}
                           fill={COLORS[index % COLORS.length]}
