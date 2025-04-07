@@ -47,6 +47,11 @@ import {
 } from "recharts";
 import HotelHiltonImg from "../public/hotel-hilto-img.jpg";
 import UserImg from "../public/User_image.png";
+import RoomsPage from "./pages/rooms";
+import CustomerMessagesPage from "./pages/messages";
+import CheckInOutPage from "./pages/check-in-out";
+import CustomerReviewPage from "./pages/customer-review";
+import PremiumVersionPage from "./pages/premium-version";
 
 function App() {
   const [activeTab, setActiveTab] = useState("stays");
@@ -1808,6 +1813,14 @@ function App() {
     </>
   );
 
+  const renderRoomsSection = () => <RoomsPage />;
+
+  const renderMessages = () => <CustomerMessagesPage />;
+
+  const renderCustomerReview = () => <CustomerReviewPage />;
+  const renderCheckInOut = () => <CheckInOutPage />;
+  const renderPremiumVersion = () => <PremiumVersionPage />;
+
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Mobile Sidebar Toggle */}
@@ -2034,9 +2047,19 @@ function App() {
           {activeSection === "dashboard" && renderDashboard()}
           {activeSection === "billing" && renderBillingSystem()}
           {activeSection === "food-delivery" && renderFoodDelivery()}
-          {activeSection !== "dashboard" &&
+          {activeSection === "rooms" && renderRoomsSection()}
+          {activeSection === "messages" && renderMessages()}
+          {activeSection === "customer-review" && renderCustomerReview()}
+          {activeSection === "check-in-out" && renderCheckInOut()}
+          {activeSection === "premium-version" && renderPremiumVersion()}
+          {/* {activeSection !== "dashboard" &&
             activeSection !== "billing" &&
-            activeSection !== "food-delivery" && (
+            activeSection !== "food-delivery" &&
+            activeSection !== "rooms" &&
+            activeSection !== "messages" &&
+            activeSection !== "customer-review" &&
+            activeSection !== "check-in-out" &&
+            activeSection !== "premium-version" && (
               <div className="flex items-center justify-center h-full">
                 <div className="bg-white rounded-lg shadow w-full max-w-md">
                   <div className="p-4 border-b">
@@ -2051,8 +2074,6 @@ function App() {
                       The{" "}
                       {activeSection === "check-in-out"
                         ? "Check In-Out"
-                        : activeSection === "rooms"
-                        ? "Rooms"
                         : activeSection === "messages"
                         ? "Messages"
                         : activeSection === "customer-review"
@@ -2071,7 +2092,7 @@ function App() {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
         </main>
       </div>
 
